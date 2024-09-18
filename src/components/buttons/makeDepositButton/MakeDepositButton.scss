@@ -1,0 +1,115 @@
+.makeDeposit {
+  position: relative;
+  width: 100%;
+  min-width: 233.5px;
+  max-width: 233.5px;
+  height: 80px;
+
+  button {
+    cursor: pointer;
+    position: absolute;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background: rgba(224, 255, 37, 0.1);
+    border: 1px solid #e0ff25;
+    color: #e0ff25;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    font-family: 'NeueMontreal', sans-serif;
+
+    // Default hover effect
+    &:hover {
+      background: #bfd91f5e;
+    }
+
+    // Disable hover effect if isFinished is true
+    &.disabled {
+      cursor: default;
+      opacity: 0.4;
+
+      &:hover {
+        background: rgba(
+          224,
+          255,
+          37,
+          0.1
+        ); // Keep the background same as normal
+      }
+    }
+  }
+}
+@media (max-width: 1920px) {
+  .makeDeposit {
+    position: relative;
+    width: 100%;
+    min-width: 190px;
+    max-width: 233.5px;
+    height: 80px;
+
+    button {
+      cursor: pointer;
+      position: absolute;
+      border: none;
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+      background: rgba(224, 255, 37, 0.1);
+      border: 1px solid #e0ff25;
+      color: #e0ff25;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 110%;
+      font-family: 'NeueMontreal', sans-serif;
+
+      // Default hover effect
+      &:hover {
+        background: #bfd91f5e;
+      }
+
+      // Disable hover effect if isFinished is true
+      &.disabled {
+        cursor: default;
+        opacity: 0.4;
+
+        &:hover {
+          background: rgba(
+            224,
+            255,
+            37,
+            0.1
+          ); // Keep the background same as normal
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1625px) {
+  .makeDeposit {
+    max-width: 190px;
+    min-width: 190px;
+  }
+}
+@media (max-width: 1440px) {
+  .makeDeposit {
+    min-width: 140px;
+    max-width: 190px;
+  }
+}
+@media (max-width: 1120px) {
+  .makeDeposit {
+    max-width: none;
+    width: calc(100% - 40px);
+
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    .bottomRight {
+      transform: translate(5vw, -60px) rotate(200deg);
+    }
+  }
+}

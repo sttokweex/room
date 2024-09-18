@@ -1,0 +1,311 @@
+.footerBox {
+  width: 100vw;
+  margin-bottom: 25px;
+
+  h6 {
+    color: var(--White, #fff);
+    font-family: 'NeueMontreal', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    margin-bottom: 18px;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.mobileLine {
+  display: none;
+}
+
+.followUsMobile {
+  display: none;
+}
+
+.roomStakeMobileText {
+  display: none;
+
+  h6 {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+
+.linkBar {
+  display: flex;
+  margin-bottom: 116px;
+  justify-content: space-between;
+
+  span {
+    margin-left: 25px;
+    position: relative;
+    margin-right: 10px;
+    // left:;
+
+    a {
+      color: #eeede9;
+      font-family: 'NeueMontreal', sans-serif;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 110%;
+    }
+  }
+}
+
+.invisibleHelpBlock {
+  width: 283px;
+}
+
+.linkBar > span:hover > a,
+.subLinkBar a:hover {
+  color: #e0ff25 !important;
+  transition: color 500ms;
+}
+
+.subLinkBar {
+  width: 744px;
+  position: relative;
+  margin-top: -41.4px;
+  display: flex;
+  align-items: end;
+
+  div {
+    position: relative;
+  }
+
+  a {
+    color: #eeede9;
+    font-family: 'NeueMontreal', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    margin-right: 50px;
+  }
+}
+
+.footerContent {
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    white-space: nowrap;
+    font-size: 19.4vw;
+    width: 100%;
+    position: relative;
+  }
+
+  .roomStakeText {
+    display: flex;
+    justify-content: center;
+    margin-left: 25px;
+    margin-right: 40px;
+    width: calc(100% - 67px);
+    height: calc(100% - 67px);
+  }
+}
+.letter-image {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 13%;
+  width: 1.06em;
+}
+
+.linkBarBottom {
+  margin-top: 43px;
+  display: flex;
+  justify-content: space-between;
+
+  div {
+    display: flex;
+    text-align: center;
+    align-items: center;
+  }
+
+  .Footeritem1 {
+    display: flex;
+    align-items: center;
+    height: 29px;
+    margin-left: 25px;
+    color: #eeede9;
+    font-family: 'NeueMontreal', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    transition: color 500ms;
+
+    p {
+      color: #cbcbcb;
+      margin-left: 8px;
+      margin-top: 3px;
+      font-family: 'NeueMontreal', sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      margin-right: 20px;
+    }
+  }
+
+  .Footeritem2 {
+    width: 337px;
+    a {
+      color: var(--White, #fff);
+      font-family: 'NeueMontreal', sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+
+  .Footeritem3 {
+    p {
+      margin-right: 40px;
+      color: var(--White, #fff);
+      text-align: right;
+      font-family: 'NeueMontreal', sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: 0.18px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .mobileLine {
+    width: 85%;
+    margin-left: 26px;
+    display: flex;
+    justify-content: space-between;
+    p {
+      color: #cbcbcb;
+      font-family: 'NeueMontreal', sans-serif;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+
+  .linkBarBottom {
+    display: none;
+  }
+
+  .followUsMobile {
+    display: block;
+    position: relative;
+    color: var(--White, #fff);
+    font-family: 'NeueMontreal', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    top: 214px;
+    left: 24px;
+  }
+  .linkBar {
+    display: flex;
+    margin-bottom: 116px;
+
+    span {
+      position: relative;
+      top: 250px;
+      margin-left: 26px;
+      display: flex;
+      flex-direction: column;
+
+      a {
+        color: #eeede9;
+        margin-left: 0px;
+        font-family: 'NeueMontreal', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 110%;
+      }
+    }
+  }
+
+  .footerContent {
+    h1 {
+      white-space: nowrap;
+      font-size: 19.4vw;
+      width: fit-content !important;
+      position: relative;
+      height: 179px;
+    }
+  }
+
+  .roomStakeMobileText {
+    display: flex !important;
+    width: fit-content;
+    position: relative;
+    top: 0;
+    margin-left: 24px;
+    color: var(--White, #fff);
+    font-family: 'Helvetica' sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 10px;
+  }
+
+  .roomStakeText {
+    display: none !important;
+  }
+
+  .letter-image {
+    width: 195.62px;
+    height: 179.143px;
+
+    margin-bottom: 50px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -85%);
+  }
+
+  .subLinkBar {
+    width: fit-content;
+    flex-direction: column;
+    position: absolute;
+    left: calc(84.5%);
+    right: 100px;
+    margin-top: 192px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: end;
+    justify-content: left;
+
+    a {
+      color: #eeede9;
+      text-align: right;
+      font-family: 'NeueMontreal', sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      margin-right: 0px;
+      line-height: 110%;
+      margin-top: 20px;
+    }
+
+    h6 {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,175 @@
+.collectDeposit {
+  position: relative;
+  width: 100%;
+  min-width: 233.5px;
+  max-width: 233.5px;
+  height: 80px;
+  overflow: hidden;
+  &:hover {
+    box-shadow: 0px 4px 20px 0px rgba(224, 255, 37, 0.3);
+    border-radius: 10px;
+  }
+
+  button {
+    white-space: nowrap;
+    cursor: pointer;
+    position: absolute;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: #e0ff25;
+    color: var(--Color-Neutral-black, #000);
+    text-align: center;
+    font-family: 'NeueMontreal', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+  }
+  .star {
+    cursor: pointer;
+  }
+  .topLeft {
+    transform: translate(+30px, 40px) rotate(200deg);
+  }
+  .topLeftDefault {
+    transition: all 1.2s;
+    position: absolute;
+    top: -30px;
+    left: 10%;
+    max-width: 24px;
+    max-height: 24px;
+  }
+  .topRightDefault {
+    transition: all 1.2s;
+    position: absolute;
+    max-width: 19.16px;
+    max-height: 19.16px;
+    top: -30px;
+    left: 90%;
+  }
+  .topRight {
+    transform: translate(-30px, 40px) rotate(200deg);
+  }
+  .bottomLeft {
+    transform: translate(30px, -50px) rotate(200deg);
+  }
+  .bottomLeftDefault {
+    transition: all 1s;
+    position: absolute;
+    top: 100px;
+    left: 10%;
+  }
+  .bottomRight {
+    transform: translate(-10px, -60px) rotate(200deg);
+  }
+  .bottomRightDefault {
+    transition: all 0.7s;
+    position: absolute;
+    left: 70%;
+    top: 100px;
+  }
+}
+@media (max-width: 1920px) {
+  .collectDeposit {
+    position: relative;
+    width: 100%;
+    min-width: 190px;
+    max-width: 233.5px;
+    height: 80px;
+    overflow: hidden;
+    &:hover {
+      box-shadow: 0px 4px 20px 0px rgba(224, 255, 37, 0.3);
+      border-radius: 10px;
+    }
+
+    button {
+      white-space: nowrap;
+      cursor: pointer;
+      position: absolute;
+      border: none;
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      background: #e0ff25;
+      color: var(--Color-Neutral-black, #000);
+      text-align: center;
+      font-family: 'NeueMontreal', sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 110%;
+    }
+    .star {
+      cursor: pointer;
+    }
+    .topLeft {
+      transform: translate(+30px, 40px) rotate(200deg);
+    }
+    .topLeftDefault {
+      transition: all 0.8s;
+      position: absolute;
+      top: -30px;
+      left: 10%;
+      max-width: 24px;
+      max-height: 24px;
+    }
+    .topRightDefault {
+      transition: all 0.8s;
+      position: absolute;
+      max-width: 19.16px;
+      max-height: 19.16px;
+      top: -30px;
+      left: 90%;
+    }
+    .topRight {
+      transform: translate(-30px, 40px) rotate(200deg);
+    }
+    .bottomLeft {
+      transform: translate(30px, -50px) rotate(200deg);
+    }
+    .bottomLeftDefault {
+      transition: all 0.6s;
+      position: absolute;
+      top: 100px;
+      left: 10%;
+    }
+    .bottomRight {
+      transform: translate(-10px, -60px) rotate(200deg);
+    }
+    .bottomRightDefault {
+      transition: all 0.4s;
+      position: absolute;
+      left: 70%;
+      top: 100px;
+    }
+  }
+}
+@media (max-width: 1625px) {
+  .collectDeposit {
+    max-width: 190px;
+    min-width: 190px;
+  }
+}
+@media (max-width: 1440px) {
+  .collectDeposit {
+    min-width: 140px;
+    max-width: 190px;
+  }
+}
+@media (max-width: 1120px) {
+  .collectDeposit {
+    max-width: none;
+    width: calc(100% - 40px);
+
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    .bottomRight {
+      transform: translate(5vw, -60px) rotate(200deg);
+    }
+  }
+}

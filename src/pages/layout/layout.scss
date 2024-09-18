@@ -1,0 +1,24 @@
+.background {
+  background-image: url('../../assets/RoomGradient.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+.headerSection,
+.aboutSection {
+  // position: relative;
+  width: 100%;
+  height: 100%;
+  height: auto;
+}
+
+.headerSection {
+  z-index: 1;
+}
+
+.aboutSection {
+  z-index: 2;
+  background-color: #00ccff;
+}

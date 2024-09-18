@@ -1,0 +1,39 @@
+.mainBlockP {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+
+  flex: 1 1 0%;
+  padding: 19px 70px 19px 36px;
+  gap: 12px;
+  border-radius: 10px;
+  background: rgba(238, 237, 233, 0.03);
+
+  h3 {
+    color: #eeede9;
+    font-family: 'NeueMontreal', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%; /* 17.6px */
+  }
+}
+@media (max-width: 1720px) {
+  .mainBlockP {
+    min-width: 835px;
+  }
+}
+@media (max-width: 1625px) {
+  .mainBlockP {
+    max-width: 835px;
+    min-width: 650px;
+  }
+}
+@media (max-width: 1440px) {
+  .mainBlockP {
+    padding: 19px 30px 19px 30px;
+    min-width: 380px;
+  }
+}

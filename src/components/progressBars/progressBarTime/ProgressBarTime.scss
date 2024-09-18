@@ -1,0 +1,156 @@
+.progressBarTime {
+  width: 100%;
+  max-width: 233.5px;
+  min-width: 233.5px;
+  height: 80px;
+  position: relative;
+  flex: 1 1 0%;
+  background: rgba(238, 237, 233, 0.03);
+  border-radius: 10px;
+  .progressTime {
+    position: absolute;
+    border-radius: 10px;
+    height: 100%;
+
+    opacity: 0.2;
+  }
+  .progressBarTimeInfo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+    margin-left: 16px;
+    gap: 13px;
+    .progressBarTimeStatus {
+      display: flex;
+      height: 24px;
+      align-items: center;
+      gap: 10px;
+    }
+    .progressBarTimeLeft {
+      h3 {
+        color: #eeede9;
+        font-family: 'NeueMontreal', sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        letter-spacing: 1.4px;
+      }
+      h5 {
+        color: #eeede9;
+        font-family: 'NeueMontreal', sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%; /* 15.4px */
+        opacity: 0.4;
+      }
+    }
+    h4 {
+      color: #fff;
+
+      text-align: center;
+      font-family: 'NeueMontreal', sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 110%; /* 17.6px */
+    }
+  }
+}
+@media (max-width: 1920px) {
+  .progressBarTime {
+    width: 100%;
+    max-width: 233.5px;
+    min-width: 190px;
+    height: 80px;
+    position: relative;
+    flex: 1 1 0%;
+    background: rgba(238, 237, 233, 0.03);
+    border-radius: 10px;
+    .progressTime {
+      position: absolute;
+      border-radius: 10px;
+      height: 100%;
+
+      opacity: 0.2;
+    }
+    .progressBarTimeInfo {
+      display: flex;
+      flex-direction: column;
+      margin-top: 12px;
+      margin-left: 16px;
+      gap: 13px;
+      .progressBarTimeStatus {
+        display: flex;
+        height: 24px;
+        align-items: center;
+        gap: 10px;
+      }
+      .progressBarTimeLeft {
+        h3 {
+          color: #eeede9;
+          font-family: 'NeueMontreal', sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 110%;
+          letter-spacing: 1.4px;
+        }
+        h5 {
+          color: #eeede9;
+          font-family: 'NeueMontreal', sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 110%; /* 15.4px */
+          opacity: 0.4;
+        }
+      }
+      h4 {
+        color: #fff;
+
+        text-align: center;
+        font-family: 'NeueMontreal', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%; /* 17.6px */
+      }
+    }
+  }
+}
+@media (max-width: 1625px) {
+  .progressBarTime {
+    max-width: 190px;
+  }
+}
+@media (max-width: 1440px) {
+  .progressBarTime {
+    min-width: 160px;
+    max-width: 190px;
+  }
+}
+
+@media (max-width: 1120px) {
+  .progressBarTime {
+    height: 10px;
+    top: 160px;
+    left: 20px;
+    position: absolute;
+    max-width: none;
+    width: calc(100% - 40px);
+
+    .progressBarTimeInfo {
+      width: 100%;
+      margin-left: 0;
+      position: absolute;
+      top: -40px;
+      left: 0;
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: center;
+      align-items: center;
+    }
+  }
+}

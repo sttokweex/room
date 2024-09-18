@@ -1,0 +1,128 @@
+.headerSectionMainBox {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  z-index: 1;
+
+  .bgImage {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 100vw;
+    transform: translateX(-50%);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      pointer-events: none;
+      box-sizing: border-box;
+    }
+  }
+
+  .mainSectionLogo {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    // top: 85%;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+  }
+
+  .mainSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    .mainSectionContentBox {
+      position: relative;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      max-width: 60%;
+      text-align: center;
+      mix-blend-mode: difference;
+      pointer-events: none;
+    }
+
+    .mainSectionContent {
+      position: relative;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 999;
+
+      h1 {
+        color: #ffff;
+        font-size: 5em;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+        font-family: 'NeueMontreal';
+        mix-blend-mode: difference;
+      }
+    }
+  }
+  @media (max-width: 850px) {
+    .pageNaviagtion {
+      display: none;
+      border: 1px solid red;
+    }
+    .connectWalletBox {
+      p {
+        display: none;
+      }
+    }
+
+    .pageNavigationMobie {
+      display: inline-flex;
+      .burgerBtn {
+        display: inline;
+      }
+    }
+
+    .mainSection {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      .mainSectionContentBox {
+        position: absolute;
+        top: 0;
+        bottom: 50%;
+        transform: translateY(-55%);
+        height: 100%;
+        max-width: none;
+        text-align: center;
+        mix-blend-mode: difference;
+      }
+
+      .mainSectionContent {
+        position: relative;
+        top: 50%;
+        bottom: 50%;
+        transform: translateY(-150%);
+
+        h1 {
+          color: #ffff;
+          font-size: 28px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 100%;
+          font-family: 'NeueMontreal', sans-serif;
+          mix-blend-mode: difference;
+        }
+      }
+    }
+  }
+}

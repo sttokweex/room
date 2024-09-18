@@ -1,0 +1,17 @@
+.background {
+  background-image: url('../../assets/RoomGradient.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+.roomPage {
+  overflow-y: hidden;
+  position: relative;
+  height: 100vh;
+
+  @media (max-width: 1120px) {
+    overflow-y: auto;
+    height: 100vh;
+  }
+}

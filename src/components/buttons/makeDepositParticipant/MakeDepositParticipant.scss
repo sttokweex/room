@@ -1,0 +1,27 @@
+.participantMakeDeposit {
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px rgba(238, 237, 233, 0.1);
+  background: rgba(238, 237, 233, 0.02);
+  .mainBlock {
+    display: flex;
+    flex: 1;
+    gap: 8px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 54px;
+    max-height: 54px;
+    h1 {
+      color: #eeede9;
+      text-align: center;
+      font-family: 'NeueMontreal', sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 110%; /* 15.4px */
+    }
+  }
+}

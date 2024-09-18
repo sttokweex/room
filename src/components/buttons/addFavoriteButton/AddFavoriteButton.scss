@@ -1,0 +1,20 @@
+.addFavorite {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Для горизонтального центрирования, если необходимо */
+  cursor: pointer;
+  border: none;
+  background: rgba(238, 237, 233, 0.1);
+  border-radius: 10px;
+  width: 100%;
+  height: 40px;
+  &:hover {
+    border-radius: 10px;
+    background: rgba(238, 237, 233, 0.2);
+  }
+}
+@media (max-width: 1120px) {
+  .addFavorite {
+    width: 40px;
+  }
+}

@@ -1,0 +1,780 @@
+.modal {
+  position: absolute;
+  width: 100%;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: rgba(67, 67, 67, 0.1);
+  backdrop-filter: blur(20px);
+  z-index: 10010;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 1120px) {
+    position: fixed;
+    overflow-y: scroll;
+    top: 0;
+    max-height: 100%;
+  }
+}
+.modalMain {
+  display: flex;
+  flex-direction: row;
+  gap: 22px;
+  height: fit-content;
+  margin-top: 281px;
+
+  min-width: 305px;
+  @media (max-width: 1555px) {
+    margin: 24px 20px 24px 20px;
+
+    max-width: 680px;
+    min-width: 680px;
+    flex-direction: column;
+  }
+  @media (max-width: 720px) {
+    min-width: 461px;
+    max-width: 461px;
+  }
+  @media (max-width: 530px) {
+    margin: 24px 10px 24px 10px;
+    max-width: 328px;
+    min-width: 328px;
+  }
+
+  .withdrawnInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .withdrawnInfoMain {
+      height: 372px;
+      flex-shrink: 0;
+      border-radius: 20px;
+      border: 1px solid rgba(185, 205, 212, 0.1);
+
+      background: rgba(40, 40, 40, 0.3);
+      backdrop-filter: blur(50px);
+      padding: 16px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      @media (max-width: 1555px) {
+        height: fit-content;
+        max-width: 680px;
+        padding: 20px;
+      }
+
+      .item1 {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        @media (max-width: 1555px) {
+          flex-direction: column;
+        }
+        .walletBalance {
+          padding: 16px;
+          box-sizing: border-box;
+          flex: 1;
+          height: 122px;
+          flex-shrink: 0;
+          border-radius: 10px;
+          background: rgba(238, 237, 233, 0.03);
+
+          .balanceType {
+            display: flex;
+            gap: 5px;
+            color: #737775;
+            font-family: 'NeueMontreal', sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 110%;
+          }
+          .balance {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 14px;
+            gap: 8px;
+
+            h5 {
+              color: #fff;
+              text-align: center;
+              font-family: 'NeueMontreal', sans-serif;
+              font-size: 30px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 100%; /* 30px */
+              letter-spacing: -0.6px;
+            }
+          }
+          h6 {
+            color: #fff;
+            float: right;
+            text-align: center;
+            font-family: 'NeueMontreal', sans-serif;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 100%; /* 24px */
+            letter-spacing: -0.48px;
+            opacity: 0.4;
+          }
+        }
+
+        .withdrawnBalance {
+          padding: 16px;
+          box-sizing: border-box;
+          border-radius: 10px;
+          flex: 1;
+          height: 122px;
+          flex-shrink: 0;
+          background: rgba(238, 237, 233, 0.03);
+          .balanceType {
+            display: flex;
+            gap: 5px;
+            color: #737775;
+            font-family: 'NeueMontreal', sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 110%;
+          }
+          .balance {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 14px;
+            gap: 8px;
+
+            h5 {
+              color: #fff;
+              text-align: center;
+              font-family: 'NeueMontreal', sans-serif;
+              font-size: 30px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 100%; /* 30px */
+              letter-spacing: -0.6px;
+            }
+          }
+          h6 {
+            color: #fff;
+            float: right;
+            text-align: center;
+            font-family: 'NeueMontreal', sans-serif;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 100%; /* 24px */
+            letter-spacing: -0.48px;
+            opacity: 0.4;
+          }
+        }
+      }
+      .total {
+        display: flex;
+        width: 268px;
+
+        box-sizing: border-box;
+        padding: 12px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        border-radius: 6px;
+        background: rgba(238, 237, 233, 0.04);
+        @media (max-width: 1555px) {
+          margin-top: 12px;
+          padding-top: 0;
+          padding-left: 0;
+          width: auto;
+          background: none;
+          opacity: 0.4;
+        }
+      }
+      .h4WithSvg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        h4 {
+          color: #eeede9;
+          text-align: center;
+          font-family: 'NeueMontreal', sans-serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 110%; /* 22px */
+        }
+      }
+      .walletInfoMain {
+        transition: all 300ms ease-in-out;
+        display: flex;
+        min-height: 40px;
+        padding: 16px 0 0 0;
+        border-radius: 10px;
+        background: rgba(238, 237, 233, 0.03);
+        flex-direction: column;
+        gap: 20px;
+
+        .walletInfoButton {
+          padding: 0 16px 0 16px;
+
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          align-self: stretch;
+          h3 {
+            color: #fff;
+
+            font-family: 'NeueMontreal', sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 110%; /* 22px */
+          }
+          .arrow-icon {
+            transition: transform 0.3s ease-in-out;
+          }
+
+          .arrow-icon.flipped {
+            transform: rotate(180deg);
+          }
+        }
+        .itemWallet {
+          transition: all 300ms ease-in-out;
+          display: flex;
+          gap: 12px;
+          h5 {
+            color: #fff;
+            font-family: 'NeueMontreal', sans-serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 110%; /* 13.2px */
+            opacity: 0.4;
+          }
+
+          .walletAddress {
+            display: flex;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            border-radius: 6px;
+            background: rgba(238, 237, 233, 0.04);
+            svg {
+              cursor: pointer;
+            }
+          }
+          .payment {
+            display: inline-flex;
+            width: 100%;
+            padding: 12px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            border-radius: 6px;
+            background: rgba(238, 237, 233, 0.04);
+          }
+        }
+        .walletBalance {
+          padding: 16px;
+          box-sizing: border-box;
+          flex: 1;
+          height: 122px;
+          flex-shrink: 0;
+          border-radius: 10px;
+          background: rgba(238, 237, 233, 0.03);
+
+          .balanceType {
+            display: flex;
+            gap: 5px;
+            color: #737775;
+            font-family: 'NeueMontreal', sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 110%;
+          }
+          .balance {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 14px;
+            gap: 8px;
+
+            h5 {
+              color: #fff;
+              text-align: center;
+              font-family: 'NeueMontreal', sans-serif;
+              font-size: 30px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 100%; /* 30px */
+              letter-spacing: -0.6px;
+            }
+          }
+          h6 {
+            color: #fff;
+            float: right;
+            text-align: center;
+            font-family: 'NeueMontreal', sans-serif;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 100%; /* 24px */
+            letter-spacing: -0.48px;
+            opacity: 0.4;
+          }
+        }
+      }
+      .item2 {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        height: 72px;
+        @media (max-width: 1555px) {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto;
+          height: fit-content;
+
+          gap: 12px;
+          .walletAddress {
+            grid-row: 1;
+            grid-column: 1;
+          }
+          .total {
+            grid-row: 2;
+            grid-column: span 2;
+          }
+          .payment {
+            grid-row: 1;
+            grid-column: 2;
+          }
+        }
+        h5 {
+          color: #fff;
+          font-family: 'NeueMontreal', sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 110%; /* 17.6px */
+          opacity: 0.4;
+          @media (max-width: 1555px) {
+            color: #fff;
+            font-family: 'NeueMontreal', sans-serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 110%; /* 13.2px */
+          }
+        }
+
+        .walletAddress {
+          display: flex;
+          width: 190px;
+          box-sizing: border-box;
+          padding: 12px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+          border-radius: 6px;
+          background: rgba(238, 237, 233, 0.04);
+          svg {
+            cursor: pointer;
+          }
+          @media (max-width: 1555px) {
+            width: auto;
+          }
+        }
+        .payment {
+          display: inline-flex;
+          flex: 1;
+          padding: 12px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+          border-radius: 6px;
+          background: rgba(238, 237, 233, 0.04);
+          @media (max-width: 1555px) {
+            width: auto;
+          }
+        }
+      }
+      .item3 {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        @media (max-width: 1555px) {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 122px 80px;
+          gap: 16px;
+
+          .finallWithdrawnBalance {
+            grid-column: span 2;
+            grid-row: 1;
+          }
+          .withdrawnButton {
+            cursor: pointer;
+            grid-column: 2;
+            grid-row: 2;
+          }
+          .mobileWithdrawnInfoCancelButton {
+            grid-column: 1;
+            grid-row: 2;
+          }
+        }
+        .finallWithdrawnBalance {
+          width: 325px;
+          height: 122px;
+          flex-shrink: 0;
+          border-radius: 10px;
+          padding: 16px;
+          box-sizing: border-box;
+          background: rgba(224, 255, 37, 0.1);
+          @media (max-width: 1555px) {
+            width: auto;
+            height: auto;
+          }
+          h4 {
+            color: #e0ff25;
+            font-family: 'NeueMontreal', sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 110%; /* 22px */
+            @media (max-width: 1555px) {
+              color: #e0ff25;
+
+              font-family: 'NeueMontreal', sans-serif;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 110%; /* 22px */
+            }
+          }
+          .balance {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 14px;
+            gap: 8px;
+            @media (max-width: 1555px) {
+              margin-top: 8px;
+            }
+            h5 {
+              color: #e0ff25;
+              text-align: center;
+              font-family: 'NeueMontreal', sans-serif;
+              font-size: 32px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 100%; /* 32px */
+              letter-spacing: -0.64px;
+            }
+          }
+          h6 {
+            color: #e0ff25;
+            float: right;
+            text-align: center;
+            font-family: 'NeueMontreal', sans-serif;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 100%; /* 24px */
+            letter-spacing: -0.48px;
+            opacity: 0.4;
+          }
+        }
+        .withdrawnButton {
+          cursor: pointer;
+          display: inline-flex;
+          flex: 1;
+          height: 122px;
+          box-sizing: border-box;
+          justify-content: center;
+          align-items: center;
+          flex-shrink: 0;
+          border-radius: 10px;
+          border: 1px solid #e0ff25;
+          background: rgba(224, 255, 37, 0.1);
+          &:hover {
+            background: rgba(224, 255, 37, 0.5);
+          }
+          @media (max-width: 1555px) {
+            width: auto;
+            height: auto;
+            padding: 0;
+          }
+          h1 {
+            color: #e0ff25;
+            font-family: 'NeueMontreal', sans-serif;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 110%; /* 26.4px */
+            margin: auto;
+            @media (max-width: 1555px) {
+              color: #e0ff25;
+
+              font-family: 'NeueMontreal', sans-serif;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 110%; /* 22px */
+            }
+          }
+        }
+        .mobileWithdrawnInfoCancelButton {
+          display: flex;
+          width: auto;
+          height: auto;
+          padding: auto;
+          box-sizing: border-box;
+          justify-content: center;
+          align-items: center;
+          flex-shrink: 0;
+          border-radius: 10px;
+          border: 1px solid rgba(238, 237, 233, 0.1);
+          background: rgba(40, 40, 40, 0.3);
+          backdrop-filter: blur(50px);
+          &:hover {
+            background: rgba(40, 40, 40, 0.9);
+            border: 1px solid rgba(238, 237, 233, 0.5);
+          }
+          h2 {
+            margin: 0 !important;
+            color: #eeede9;
+            font-family: 'NeueMontreal', sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 110%; /* 22px */
+          }
+        }
+      }
+    }
+    .withdrawnInfoCancelButton {
+      display: flex;
+      width: 338px;
+      height: 80px;
+      padding: 27px 0px;
+      box-sizing: border-box;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      border-radius: 10px;
+      border: 1px solid rgba(238, 237, 233, 0.1);
+      background: rgba(40, 40, 40, 0.3);
+      backdrop-filter: blur(50px);
+      margin-left: auto;
+      &:hover {
+        background: rgba(40, 40, 40, 0.9);
+        border: 1px solid rgba(238, 237, 233, 0.5);
+      }
+      h2 {
+        color: #eeede9;
+        font-family: 'NeueMontreal', sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        margin: auto;
+      }
+    }
+  }
+  .roomListState {
+    cursor: pointer;
+    display: flex;
+    box-sizing: border-box;
+
+    padding: 24px 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid rgba(185, 205, 212, 0.1);
+    background: rgba(40, 40, 40, 0.3);
+    &:hover {
+      background: rgba(40, 40, 40, 0.9);
+      border: 1px solid rgba(185, 205, 212, 0.4);
+    }
+    h6 {
+      color: #eeede9;
+      text-align: center;
+      font-family: 'NeueMontreal', sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 110%; /* 17.6px */
+    }
+  }
+  .roomListСontainer {
+    border-radius: 20px;
+    border: 1px solid rgba(185, 205, 212, 0.1);
+    box-sizing: border-box;
+    padding: 16px;
+    max-width: 680px;
+    min-width: 100px;
+    background: rgba(40, 40, 40, 0.3);
+    height: fit-content;
+    backdrop-filter: blur(50px);
+
+    .roomList {
+      overflow-y: auto;
+      overflow-x: hidden;
+      max-height: 600px;
+      box-sizing: border-box;
+      min-height: 64px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      @media (max-width: 1555px) {
+        max-height: 455px;
+      }
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background: rgba(238, 237, 233, 0.1);
+      }
+      .roomItem {
+        display: flex;
+        padding: 16px;
+        box-sizing: border-box;
+        height: 64px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: rgba(238, 237, 233, 0.03);
+        align-items: center;
+        gap: 10px;
+        @media (max-width: 1550px) {
+          padding: 20px;
+          min-width: 630px;
+          max-width: 660px;
+        }
+        @media (max-width: 720px) {
+          min-width: 405px;
+          max-width: 425px;
+        }
+        @media (max-width: 530px) {
+          max-width: 290px;
+          min-width: 275px;
+        }
+        svg {
+          min-width: 32px;
+          min-height: 32px;
+        }
+        h2 {
+          color: #eeede9;
+          margin-top: 5px;
+          width: 38px;
+          font-family: 'NeueMontreal', sans-serif;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 90%; /* 21.6px */
+          letter-spacing: -0.24px;
+        }
+        h3 {
+          color: #eeede9;
+          margin-top: 7px;
+          margin-left: 4px;
+          font-family: 'NeueMontreal', sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 110%; /* 17.6px */
+          letter-spacing: 1.6px;
+          white-space: nowrap;
+          @media (max-width: 720px) {
+            display: none;
+          }
+        }
+        .winning {
+          color: #8cfdec;
+          margin-top: 7px;
+          width: 60px;
+          margin-left: 26px;
+          font-family: 'NeueMontreal', sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 110%; /* 17.6px */
+          @media (max-width: 530px) {
+            display: none;
+          }
+        }
+        .lose {
+          width: 60px;
+          margin-top: 7px;
+          margin-left: 26px;
+          text-align: center;
+          color: #ff6c1a;
+          font-family: 'NeueMontreal', sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 110%; /* 17.6px */
+          @media (max-width: 530px) {
+            display: none;
+          }
+        }
+        .totalDep {
+          display: flex;
+          margin-left: 26px;
+          gap: 8px;
+          @media (max-width: 530px) {
+            margin: 0;
+          }
+          h4 {
+            margin-top: 7px;
+            color: #fff;
+            text-align: center;
+            font-family: 'NeueMontreal', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 110%; /* 17.6px */
+            opacity: 0.4;
+            white-space: nowrap;
+          }
+          .deposit {
+            display: flex;
+            gap: 4px;
+            @media (max-width: 1550px) {
+              gap: 11px;
+            }
+            div {
+              margin-top: 7px;
+              align-items: center;
+              color: #fff;
+              text-align: center;
+              font-family: 'NeueMontreal', sans-serif;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 110%; /* 17.6px */
+            }
+            img {
+              width: 15px;
+              height: 15px;
+              margin-top: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

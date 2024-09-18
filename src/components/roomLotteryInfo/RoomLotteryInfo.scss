@@ -1,0 +1,155 @@
+.lotteryInfo {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  max-width: 4500px;
+  min-width: 509.5px;
+  padding: 19px 5%;
+  align-items: center;
+
+  align-self: stretch;
+  border-radius: 10px;
+  background: rgba(238, 237, 233, 0.03);
+  box-sizing: border-box;
+}
+
+.lotteryInfoDefaultBlock {
+  display: flex;
+  margin: 0 auto;
+  margin-left: 4px;
+  flex-direction: column;
+  max-width: 150px;
+  text-align: center;
+  align-items: center;
+  gap: 4px;
+
+  .description {
+    color: #5e5e5e;
+    font-family: 'NeueMontreal', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 130%;
+  }
+
+  .text {
+    color: #eeede9;
+    font-family: 'NeueMontreal', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 110%;
+  }
+
+  .nominal {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100px;       
+    display: flex;
+    align-items: center;
+
+
+    img {
+      margin-left: 4px;
+      margin-right: 4px;
+      width: auto;
+      height: auto;
+    }
+  }
+}
+@media (max-width: 1920px) {
+  .lotteryInfo {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    max-width: 655px;
+    min-width: 509.5px;
+    padding: 19px 5%;
+    align-items: center;
+
+    align-self: stretch;
+    border-radius: 10px;
+    background: rgba(238, 237, 233, 0.03);
+    box-sizing: border-box;
+  }
+
+  .lotteryInfoDefaultBlock {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    max-width: 150px;
+    text-align: start;
+    align-items: start;
+    gap: 4px;
+
+    .description {
+      color: #5e5e5e;
+      font-family: 'NeueMontreal', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 130%;
+    }
+
+    .text {
+      color: #eeede9;
+      font-family: 'NeueMontreal', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 110%;
+    }
+
+    .nominal {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-left: 4px;
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+}
+@media (max-width: 1564px) {
+  .lotteryInfo {
+    padding: 10px 1%;
+    justify-content: center;
+    flex: 1 1 0%;
+    gap: 10px;
+    margin: 0 auto;
+    max-width: 509.5px;
+    min-width: 380px;
+  }
+  .lotteryInfoDefaultBlock {
+    margin: 0;
+    max-width: 120px;
+  }
+}
+@media (max-width: 1120px) {
+  .lotteryInfo {
+    padding: 12px 20px;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    gap: 10px;
+    max-width: none;
+    min-width: 200px;
+    min-height: 125px;
+    max-height: 150px;
+    display: grid;
+
+    grid-template-columns: repeat(2, auto); /* Creates 2 equal columns */
+    grid-template-rows: repeat(
+      2,
+      auto
+    ); /* Creates 2 rows that adjust to content height */
+  }
+
+  .lotteryInfoDefaultBlock {
+    margin: auto;
+    width: 100%;
+    min-width: 100px;
+    align-content: sTART;
+    text-align: start;
+    align-items: start;
+  }
+}

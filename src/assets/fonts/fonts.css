@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'NeueMontreal';
+  src: url('../fonts/NeueMontreal-Regular.ttf') format('truetype');
+  /* font-weight: 500; */
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('../fonts/HelveticaNowDisplay-Regular.ttf') format('truetype');
+  /* font-weight: 700; */
+}

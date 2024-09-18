@@ -1,0 +1,232 @@
+.toBlockchainLose {
+  border-radius: 10px;
+  min-width: 400px;
+  background: rgba(238, 237, 233, 0.03);
+  height: 170px;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: rgba(238, 237, 233, 0.1);
+  }
+
+  .desription {
+    display: flex;
+    gap: 24px;
+
+    .shadow {
+      width: 266px;
+      height: 334px;
+      transform: rotate(-90deg);
+      position: absolute;
+      right: -59px;
+      bottom: -113px;
+      border-radius: 334px;
+      opacity: 0.1;
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgb(255, 108, 26),
+        rgba(140, 253, 236, 0) 100%
+      );
+      filter: blur(32px);
+    }
+
+    img {
+      position: absolute;
+      right: 8px;
+      bottom: -1px;
+      transition: transform 0.3s ease; // Плавный переход для изображения
+    }
+
+    h3 {
+      font-family: 'NeueMontreal', sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 110%;
+      color: #eeede9;
+    }
+  }
+
+  .toBlockChainButton {
+    box-sizing: border-box;
+    height: 48px;
+    width: 188px;
+
+    display: flex;
+    padding: 12px 24px 12px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 6px;
+    background: rgba(238, 237, 233, 0.1);
+    &:hover {
+      cursor: pointer;
+      border-radius: 6px;
+      background: rgba(238, 237, 233, 0.2);
+    }
+    h2 {
+      color: #eeede9;
+      text-align: center;
+      font-family: 'NeueMontreal', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 110%; /* 17.6px */
+    }
+  }
+
+  // Эффект ховера для изображения
+  &:hover .desription img {
+    transform: scale(1.1); // Увеличиваем изображение при наведении
+  }
+}
+@media (max-width: 1920px) {
+  .toBlockchainLose {
+    border-radius: 10px;
+    min-width: 400px;
+    background: rgba(238, 237, 233, 0.03);
+    height: 170px;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    transition: background 0.3s ease;
+    @media (max-width: 1440px) {
+      min-height: 170px;
+      width: 100%;
+      min-width: 100px;
+      gap: 30px;
+      height: auto;
+    }
+    @media (max-width: 1120px) {
+      min-height: 100px;
+      height: auto;
+      min-width: 305px;
+      justify-content: unset;
+      width: 100%;
+      gap: 30px;
+      max-width: none;
+    }
+    @media (max-width: 390px) {
+      min-width: 225px;
+    }
+
+    &:hover {
+      background: rgba(238, 237, 233, 0.1);
+    }
+
+    .desription {
+      display: flex;
+      gap: 24px;
+
+      .shadow {
+        width: 266px;
+        height: 334px;
+        transform: rotate(-90deg);
+        position: absolute;
+        right: -59px;
+        bottom: -113px;
+        border-radius: 334px;
+        opacity: 0.1;
+        background: radial-gradient(
+          50% 50% at 50% 50%,
+          rgb(255, 108, 26),
+          rgba(140, 253, 236, 0) 100%
+        );
+        filter: blur(32px);
+      }
+
+      img {
+        position: absolute;
+        right: 8px;
+        bottom: -1px;
+        transition: transform 0.3s ease; // Плавный переход для изображения
+
+        @media (max-width: 1440px) {
+          right: -9px;
+          bottom: 0px;
+        }
+      }
+
+      h3 {
+        font-family: 'NeueMontreal', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 110%;
+        color: #eeede9;
+
+        @media (max-width: 1120px) {
+          color: #eeede9;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 110%; /* 19.8px */
+        }
+      }
+    }
+
+    .toBlockChainButton {
+      box-sizing: border-box;
+      height: 48px;
+      width: 188px;
+
+      display: flex;
+      padding: 12px 24px 12px 16px;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      border-radius: 6px;
+      background: rgba(238, 237, 233, 0.1);
+      &:hover {
+        cursor: pointer;
+        border-radius: 6px;
+        background: rgba(238, 237, 233, 0.2);
+      }
+      h2 {
+        color: #eeede9;
+        text-align: center;
+        font-family: 'NeueMontreal', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 110%; /* 17.6px */
+
+        @media (max-width: 1120px) {
+          color: #eeede9;
+          font-size: 14px;
+          line-height: 110%; /* 15.4px */
+        }
+      }
+
+      @media (max-width: 1120px) {
+        min-width: 150px;
+        display: flex;
+        padding: 8px 12px 8px 8px;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        height: auto;
+
+        img {
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+
+    // Эффект ховера для изображения
+    &:hover .desription img {
+      transform: scale(1.1); // Увеличиваем изображение при наведении
+    }
+  }
+}

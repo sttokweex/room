@@ -1,0 +1,409 @@
+{
+	"ABI version": 2,
+	"version": "2.2",
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"_owner","type":"address"},
+				{"name":"_stTokenRoot","type":"address"},
+				{"name":"_stEverVault","type":"address"},
+				{"name":"_prizeTokenRoot","type":"address"},
+				{"name":"_minDepositValue","type":"uint128"},
+				{"name":"_minDepositValueForReward","type":"uint128"},
+				{"name":"_depositsAmountForReward","type":"uint32"},
+				{"name":"_rewardPeriod","type":"uint32"},
+				{"name":"_poolFeeNumerator","type":"uint128"},
+				{"name":"_fundFeeNumerator","type":"uint128"},
+				{"name":"_poolFeeReceiverAddress","type":"address"},
+				{"name":"_fundAddress","type":"address"},
+				{"name":"_withdrawFee","type":"uint128"},
+				{"name":"_prizeTokenRewardType","type":"uint8"},
+				{"name":"_prizeTokenRewardValue","type":"optional(uint128)"},
+				{"name":"_prizeTokenNoRewardValue","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onAcceptTokensTransfer",
+			"inputs": [
+				{"name":"value0","type":"address"},
+				{"name":"_amount","type":"uint128"},
+				{"name":"value2","type":"address"},
+				{"name":"value3","type":"address"},
+				{"name":"_remainingGasTo","type":"address"},
+				{"name":"value5","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "deposit",
+			"inputs": [
+				{"name":"_amount","type":"uint128"},
+				{"name":"_nonce","type":"uint64"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onAcceptTokensMint",
+			"inputs": [
+				{"name":"value0","type":"address"},
+				{"name":"_amount","type":"uint128"},
+				{"name":"value2","type":"address"},
+				{"name":"_payload","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "withdraw",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "calculateReward",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onStEverVaultDetails",
+			"inputs": [
+				{"components":[{"name":"nonce","type":"uint128"},{"name":"governance","type":"uint256"},{"name":"stEverSupply","type":"uint128"},{"name":"totalAssets","type":"uint128"},{"name":"availableAssets","type":"uint128"},{"name":"totalStEverFee","type":"uint128"},{"name":"effectiveEverAssets","type":"uint128"},{"name":"remainingLockedAssets","type":"uint128"},{"name":"unlockPerSecond","type":"uint128"},{"name":"stEverWallet","type":"address"},{"name":"stTokenRoot","type":"address"},{"name":"lastUnlockTime","type":"uint64"},{"name":"fullUnlockSeconds","type":"uint128"},{"name":"remainingSeconds","type":"uint128"},{"name":"gainFee","type":"uint128"},{"name":"stEverFeePercent","type":"uint32"},{"name":"minStrategyDepositValue","type":"uint128"},{"name":"minStrategyWithdrawValue","type":"uint128"},{"name":"isPaused","type":"bool"},{"name":"strategyFactory","type":"address"},{"name":"withdrawHoldTime","type":"uint64"},{"name":"owner","type":"address"},{"name":"accountVersion","type":"uint32"},{"name":"stEverVaultVersion","type":"uint32"},{"name":"clusterVersion","type":"uint32"},{"name":"timeAfterEmergencyCanBeActivated","type":"uint64"},{"components":[{"name":"isEmergency","type":"bool"},{"name":"isPaused","type":"bool"},{"name":"emitter","type":"address"},{"name":"emitTimestamp","type":"uint64"}],"name":"emergencyState","type":"tuple"}],"name":"_details","type":"tuple"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "upgrade",
+			"inputs": [
+				{"name":"code","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onTokenWallet",
+			"inputs": [
+				{"name":"_wallet","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getDepositData",
+			"inputs": [
+				{"name":"answerId","type":"uint32"},
+				{"name":"user","type":"address"}
+			],
+			"outputs": [
+				{"components":[{"name":"deposit","type":"uint128"},{"name":"reward","type":"uint128"}],"name":"value0","type":"tuple"}
+			]
+		},
+		{
+			"name": "getActiveDepositsAmount",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"uint128"}
+			]
+		},
+		{
+			"name": "getPoolFeeReceiverAddress",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"address"}
+			]
+		},
+		{
+			"name": "getFundAddress",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"address"}
+			]
+		},
+		{
+			"name": "getPoolInfo",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"components":[{"name":"owner","type":"address"},{"name":"poolFactory","type":"address"},{"name":"stEverVault","type":"address"},{"name":"everReserves","type":"uint128"},{"name":"totalSupply","type":"uint128"},{"name":"stTokenRoot","type":"address"},{"name":"totalStSupply","type":"uint128"},{"name":"prizeTokenRoot","type":"address"},{"name":"prizeTokenSupply","type":"uint128"},{"name":"minDepositValue","type":"uint128"},{"name":"withdrawFee","type":"uint128"}],"name":"value0","type":"tuple"}
+			]
+		},
+		{
+			"name": "getRewardInfo",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"components":[{"name":"minDepositValueForReward","type":"uint128"},{"name":"rewardPeriod","type":"uint32"},{"name":"rewardTimestamp","type":"uint128"},{"name":"poolFeeNumerator","type":"uint128"},{"name":"fundFeeNumerator","type":"uint128"},{"name":"depositsAmountForReward","type":"uint32"},{"name":"prizeTokenRewardType","type":"uint8"},{"name":"prizeTokenRewardValue","type":"optional(uint128)"},{"name":"prizeTokenNoRewardValue","type":"uint128"}],"name":"value0","type":"tuple"}
+			]
+		},
+		{
+			"name": "isPoolLocked",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"bool"}
+			]
+		},
+		{
+			"name": "setPoolFeeReceiverAddress",
+			"inputs": [
+				{"name":"_poolFeeReceiver","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setFundAddress",
+			"inputs": [
+				{"name":"_fundAddress","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "addToEverReserves",
+			"inputs": [
+				{"name":"_amount","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "withdrawAllAssets",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "withdrawPrizeTokenAssets",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "withdrawRemainingStAssets",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "withdrawRemainingAssets",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "withdrawFees",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "transferOwnership",
+			"inputs": [
+				{"name":"newOwner","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "renounceOwnership",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "_randomNonce",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"_randomNonce","type":"uint256"}
+			]
+		},
+		{
+			"name": "owner",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"owner","type":"address"}
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"_randomNonce","type":"uint256"},
+		{"key":2,"name":"poolFactory","type":"address"}
+	],
+	"events": [
+		{
+			"name": "PoolDeployed",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "UpdateMinDepositValue",
+			"inputs": [
+				{"name":"current","type":"uint128"},
+				{"name":"previous","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "UpdatePoolFeeReceiverAddress",
+			"inputs": [
+				{"name":"current","type":"address"},
+				{"name":"previous","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "UpdateFundAddress",
+			"inputs": [
+				{"name":"current","type":"address"},
+				{"name":"previous","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "Deposit",
+			"inputs": [
+				{"name":"user","type":"address"},
+				{"name":"amount","type":"uint128"},
+				{"name":"stAmount","type":"uint128"},
+				{"name":"totalSupply","type":"uint128"},
+				{"name":"totalStSupply","type":"uint128"},
+				{"name":"nonce","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "Withdrawal",
+			"inputs": [
+				{"name":"user","type":"address"},
+				{"name":"amount","type":"uint128"},
+				{"name":"reward","type":"uint128"},
+				{"name":"totalSupply","type":"uint128"},
+				{"name":"withdrawFee","type":"uint128"},
+				{"name":"withdrawal","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "AssignReward",
+			"inputs": [
+				{"name":"assignee","type":"address"},
+				{"name":"reward","type":"uint128"},
+				{"name":"poolFee","type":"uint128"},
+				{"name":"fundFee","type":"uint128"},
+				{"name":"stReward","type":"uint128"},
+				{"name":"everReserves","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "CancelRewardAssignment",
+			"inputs": [
+				{"name":"depositsAmount","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "EverReservesSync",
+			"inputs": [
+				{"name":"amount","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "PrizeTokenReservesSync",
+			"inputs": [
+				{"name":"amount","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "PoolUpgraded",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "OwnershipTransferred",
+			"inputs": [
+				{"name":"previousOwner","type":"address"},
+				{"name":"newOwner","type":"address"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"_randomNonce","type":"uint256"},
+		{"name":"owner","type":"address"},
+		{"name":"poolFactory","type":"address"},
+		{"name":"stEverVault","type":"address"},
+		{"name":"stEverWallet","type":"address"},
+		{"name":"stTokenRoot","type":"address"},
+		{"name":"prizeTokenWallet","type":"address"},
+		{"name":"prizeTokenRoot","type":"address"},
+		{"name":"depositsAmountForReward","type":"uint32"},
+		{"name":"everReserves","type":"uint128"},
+		{"name":"totalSupply","type":"uint128"},
+		{"name":"totalStSupply","type":"uint128"},
+		{"name":"totalPrizeTokenSupply","type":"uint128"},
+		{"name":"minDepositValueForReward","type":"uint128"},
+		{"name":"minDepositValue","type":"uint128"},
+		{"name":"rewardTimestamp","type":"uint128"},
+		{"name":"rewardPeriod","type":"uint32"},
+		{"name":"fundFeeNumerator","type":"uint128"},
+		{"name":"poolFeeNumerator","type":"uint128"},
+		{"name":"fundAddress","type":"address"},
+		{"name":"poolFeeReceiverAddress","type":"address"},
+		{"name":"prizeTokenRewardType","type":"uint8"},
+		{"name":"prizeTokenRewardValue","type":"optional(uint128)"},
+		{"name":"prizeTokenNoRewardValue","type":"uint128"},
+		{"name":"withdrawFee","type":"uint128"},
+		{"name":"depositsData","type":"map(address,uint128)"},
+		{"name":"pendingDeposits","type":"map(uint64,address)"},
+		{"name":"isLocked","type":"bool"},
+		{"name":"tempRemainingGasTo","type":"address"},
+		{"components":[{"name":"activeDepositsAmount","type":"uint16"},{"name":"inactiveDepositsAmount","type":"uint16"},{"name":"activeUsers","type":"address[]"},{"name":"reward","type":"uint128"},{"name":"accFundFee","type":"uint128"},{"name":"accPoolFee","type":"uint128"},{"name":"rewardAssignee","type":"address"}],"name":"stats","type":"tuple"}
+	]
+}

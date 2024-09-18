@@ -1,0 +1,119 @@
+.FAQbox {
+  height: 898px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    color: #eeede9;
+    font-family: 'NeueMontreal', sans-serif;
+    font-size: 82px;
+    font-style: normal;
+    font-weight: 500;
+    width: fit-content;
+    line-height: 98%;
+    letter-spacing: -0.82px;
+    margin-bottom: 73px;
+  }
+}
+
+.FAQItemBox {
+  width: 100%;
+  max-width: 742px;
+}
+
+.FAQItem {
+  border-radius: 12px;
+  border: 1px solid #252a2a;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(5px);
+  margin-bottom: 15px;
+  min-width: 250px;
+  overflow: hidden;
+  padding: 18px;
+  box-sizing: border-box;
+
+  .FAQItemHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+
+    h6 {
+      color: #eeede9;
+      font-family: 'NeueMontreal', sans-serif;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 110%;
+      margin-left: 33px;
+    }
+
+    .itemImgBox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100px;
+      min-width: 50px;
+      min-height: 50px;
+
+      transition: transform 0.3s ease;
+    }
+
+    .rotated {
+      transform: rotate(180deg);
+    }
+  }
+
+  .FAQItemContent {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 33px;
+
+    p {
+      color: #fff;
+      font-family: 'Helvetica';
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 130%;
+      margin: 20px 0;
+    }
+  }
+
+  .expanded {
+    max-height: 250px;
+    margin-top: 10px;
+  }
+}
+.FAQItem:hover {
+  .itemImgBox {
+    transition: 400ms ease-in-out;
+
+    background-color: rgba(224, 255, 37, 0.1);
+  }
+}
+
+@media (max-width: 768px) {
+  .FAQbox {
+    margin-top: 80px !important;
+    margin: 24px;
+    position: relative;
+    h1 {
+      color: #eeede9;
+      font-family: 'NeueMontreal', sans-serif;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 500;
+      width: fit-content;
+      line-height: 98%;
+      letter-spacing: -0.82px;
+      margin-bottom: 32px;
+    }
+  }
+
+  h6 {
+    font-size: 18px !important;
+  }
+}
